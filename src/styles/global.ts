@@ -8,9 +8,10 @@ export default createGlobalStyle`
   --color-secundary-dark: #885BF0;
   --color-primary: #04D361;
   --color-primary-dark: #08C15C;
-  --commum-background: #F0F0F7;
-  --commum-input: #9C98A6;
-  --commum-border: #FAFAFC;
+  --commum-background: #F9F9F9;
+  --commum-input: #FAFAFC;
+  --commum-input-text: #9C98A6;
+  --commum-border: #E6E6F0;
   --commum-text: #707070;
   --commum-disabled: #DCDCE5;
   --commum-facebook: #5280E0;

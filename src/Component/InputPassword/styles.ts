@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-export const InputBlock = styled('div')`
+export const Container = styled('div')`
   position: relative;
-  height: 4.6rem;
-
+  height: 100%;
   &:focus-within::after {
     width: calc(100%-3.2rem);
     height: 3px;
@@ -29,9 +28,8 @@ export const InputBlock = styled('div')`
 export const Input = styled('input')`
   width: 100%;
   height: 100%;
-  border: 1px solid var(--commum-border);
-  color: var(--commum-input);
-
+  color: var(--commum-text);
+  border:0;
   outline: 0;
   font: 1.6rem Poppins;
   &:focus::placeholder {
@@ -39,6 +37,8 @@ export const Input = styled('input')`
   }
   padding: 0.8rem 1.8rem;
   ::placeholder {
-    font: 1.6rem Poppins;
+    font: 1.5rem Poppins;
+    color: var(--commum-input-text);
+
   }
 `;

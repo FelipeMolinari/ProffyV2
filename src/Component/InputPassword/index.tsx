@@ -1,40 +1,35 @@
 import React, { useState } from 'react';
-import { InputBlock, Input } from './styles';
+import { Container, Input } from './styles';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 
 interface InputProps {
-  name: string;
-  label: string;
-  index: number;
-  register: any;
+	name: string;
+	label: string;
+	index: number;
+	register: any;
 }
 
-const InputContainer: React.FC<InputProps> = ({
-  name,
-  index,
-  label,
-  register,
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
+const InputContainer: React.FC<InputProps> = ({ name, index, label, register }) => {
+	const [ isVisible, setIsVisible ] = useState(false);
 
-  function toggleVisibility() {
-    setIsVisible(!isVisible);
-  }
-  return (
-    <InputBlock className="input-block" key={name + index}>
-      <Input
-        ref={register}
-        className="input-camp"
-        name={name}
-        placeholder={label}
-        type={isVisible ? 'text' : 'password'}
-      />
-      {isVisible ? (
-        <AiOutlineEyeInvisible size={18} onClick={() => toggleVisibility()} />
-      ) : (
-        <AiOutlineEye size={18} onClick={() => toggleVisibility()} />
-      )}
-    </InputBlock>
-  );
+	function toggleVisibility() {
+		setIsVisible(!isVisible);
+	}
+	return (
+		<Container className="input-block">
+			<Input
+				ref={register}
+				className="input-camp"
+				name={name}
+				placeholder={label}
+				type={isVisible ? 'text' : 'password'}
+			/>
+			{isVisible ? (
+				<AiOutlineEyeInvisible size={18} onClick={() => toggleVisibility()} />
+			) : (
+				<AiOutlineEye size={18} onClick={() => toggleVisibility()} />
+			)}
+		</Container>
+	);
 };
 export default InputContainer;

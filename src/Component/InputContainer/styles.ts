@@ -5,11 +5,13 @@ export const Container = styled('div')`
   background: var(--commum-input);
   border-radius: 0.8rem;
   overflow: hidden;
+  border: 1px solid var(--commum-border);
+
 `;
 
 export const InputBlock = styled('div')`
   position: relative;
-  height: 4.6rem;
+  height: 5.4rem;
 
   &:focus-within::after {
     width: calc(100%-3.2rem);
@@ -36,9 +38,9 @@ export const InputBlock = styled('div')`
 export const Input = styled('input')`
   width: 100%;
   height: 100%;
-  border: 1px solid var(--commum-border);
-  color: var(--commum-input);
-
+  color: var(--commum-text);
+   border:0;
+  border-bottom:1px solid var(--commum-border);
   outline: 0;
   font: 1.6rem Poppins;
   &:focus::placeholder {
@@ -46,6 +48,8 @@ export const Input = styled('input')`
   }
   padding: 0.8rem 1.8rem;
   ::placeholder {
-    font: 1.6rem Poppins;
+    font: 1.5rem Poppins;
+    color: var(--commum-input-text);
+
   }
 `;

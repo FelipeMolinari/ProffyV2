@@ -14,7 +14,7 @@ export const Container = styled('div')`
   .content {
     width: 68%;
     .legend-form {
-      font: 500 2.4rem Poppins;
+      font: 700 2.4rem Poppins;
       margin-bottom: 1.4rem;
     }
     .input-above {
