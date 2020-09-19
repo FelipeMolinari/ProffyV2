@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaHeart } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import { Container } from './styles';
 import InputContainer from '../InputContainer';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -34,7 +35,7 @@ function LangingAside() {
 								<Checkbox color="primary" size="medium" />
 								Lembrar-me
 							</span>
-							<a href="/login/recuperar">Esqueci minha senha</a>
+							<Link to="/recover">Esqueci minha senha</Link>
 						</div>
 						<div className="footer-container">
 							<CustomButton colorName="--color-primary" disabled={!(watch('email') && watch('password'))}>
@@ -43,7 +44,7 @@ function LangingAside() {
 							<CustomButton colorName="--commum-facebook">Entrar com o Facebook</CustomButton>
 							<div>
 								<span>
-									Não tem conta? <a>Cadastre-se</a>
+									Não tem conta? <Link to="/signin">Cadastre-se</Link>
 								</span>
 								<div>
 									<span>É de graça</span>

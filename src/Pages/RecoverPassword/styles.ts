@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled('div')`
+export const Container = styled.div`
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 
 	@media (min-width: 800px) {
 		display: grid;
 
-		grid-template-columns: 0.55fr 0.45fr;
+		grid-template-columns: 0.45fr 0.55fr;
 		grid-template-rows: 1fr;
 	}
 

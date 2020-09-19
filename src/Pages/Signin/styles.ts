@@ -3,29 +3,23 @@ import styled from 'styled-components';
 export const Container = styled.div`
 	width: 100vw;
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
-
+	display: block;
 	@media (min-width: 800px) {
-		display: grid;
-
-		grid-template-columns: 1.8fr 1fr;
-		grid-template-rows: 1fr;
-	}
-
-	@media (max-height: 600px) {
-		display: block;
+		display: flex;
+		align-items: stretch;
 		.landing-aside {
-			height: 300px;
+			flex: 0.55;
+			height: unset;
 		}
 		.form-landing {
-			height: 500px;
+			flex: 0.45;
+			height: unset;
 		}
 	}
 	.landing-aside {
-		flex: 0.4;
+		heigth: 100%;
 	}
 	.form-landing {
-		flex: 0.6;
+		heigth: 100%;
 	}
 `;

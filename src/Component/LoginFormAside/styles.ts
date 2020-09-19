@@ -64,6 +64,8 @@ export const Container = styled('div')`
           a {
             font: 700 1.4rem Poppins;
             color: var(--color-secundary);
+            text-decoration: none;
+
             &:hover {
               color: var(--color-secundary-dark);
               text-decoration: underline;

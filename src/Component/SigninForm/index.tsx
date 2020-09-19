@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { FaHeart } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { Container } from './styles';
 import InputContainer from '../InputContainer';
-import Checkbox from '@material-ui/core/Checkbox';
 import CustomButton from '../CustomButton';
+import Separator from '../Separator';
 const arrayImput = [
 	{
 		name: 'name',
@@ -38,6 +37,10 @@ function SigninForm() {
 				<form action="">
 					<div className="form-container">
 						<legend className="legend-form">Cadastro</legend>
+						<CustomButton colorName="--commum-facebook" style={{ marginTop: 16, marginBottom: 16 }}>
+							Entrar com o Facebook
+						</CustomButton>
+						<Separator text="ou" />
 						<p>Preencha os dados abaixo para começar.</p>
 						<InputContainer {...{ arrayImput }} register={register} />
 
